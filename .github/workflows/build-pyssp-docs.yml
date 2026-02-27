@@ -1,4 +1,4 @@
-name: Build and Publish pySSP Docs
+name: Build and Deploy pySSP Docs
 
 on:
   repository_dispatch:
@@ -8,21 +8,24 @@ on:
     - cron: "17 4 * * *"
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: pyssp-docs-publish
   cancel-in-progress: true
 
 jobs:
-  build-and-publish:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout docs repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Checkout pySSP source repo
         uses: actions/checkout@v4
@@ -44,24 +47,27 @@ jobs:
       - name: Build docs
         run: sphinx-build -b html pyssp-src/docs/source pyssp-src/docs/build/html
 
-      - name: Publish to docs directory
+      - name: Prepare site artifact
         shell: bash
         run: |
-          rm -rf docs
-          mkdir -p docs
-          cp -a pyssp-src/docs/build/html/. docs/
-          touch .nojekyll
+          rm -rf _site
+          mkdir -p _site/docs
+          cp -a pyssp-src/docs/build/html/. _site/docs/
+          cp -a index.html _site/index.html
+          touch _site/.nojekyll
 
-      - name: Commit and push changes
-        run: |
-          if git diff --quiet; then
-            echo "No documentation changes to publish."
-            exit 0
-          fi
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add -A
-          git commit -m "Publish pySSP docs from latest source"
-          git push
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
