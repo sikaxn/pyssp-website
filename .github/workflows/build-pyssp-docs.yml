@@ -1,6 +1,10 @@
 name: Build and Deploy pySSP Docs
 
 on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
   repository_dispatch:
     types: [pyssp_release_published]
   workflow_dispatch:
@@ -22,13 +26,13 @@ jobs:
 
     steps:
       - name: Checkout docs repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Checkout pySSP source repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: sikaxn/pySSP
           ref: main
@@ -57,13 +61,14 @@ jobs:
           touch _site/.nojekyll
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
