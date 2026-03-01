@@ -6,15 +6,26 @@
 -->
 <html>
     <head>
-        <title>pySSP</title>
+        <title>Python SSP</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="description" content="pySSP: Python tooling for Sound Show Playback workflows." />
+        <meta name="description" content="Python SSP: an open source alternative to Sports Sounds Pro for show playback workflows." />
+        <meta name="keywords" content="Python SSP, Sports Sounds Pro alternative, show playback, arena audio, timecode output, web remote, MIDI control, sound playback software" />
+        <link rel="icon" type="image/png" href="images/logo2.png" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <style>
             :root {
                 --panel: rgba(255, 255, 255, 0.08);
                 --panel-border: rgba(255, 255, 255, 0.18);
+            }
+
+            #header {
+                background-image:
+                    linear-gradient(rgba(25, 32, 56, 0.7), rgba(25, 32, 56, 0.78)),
+                    url("images/logo2.png");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
 
             #header .inner {
@@ -29,10 +40,14 @@
                 text-align: center;
             }
 
-            .hero-subtitle {
-                max-width: 46rem;
+            #header .hero-subtitle {
+                width: 100%;
+                max-width: 40rem;
                 margin: 0.75rem auto 0 auto;
+                padding: 0 1rem;
+                display: block;
                 text-align: center;
+                line-height: 1.6;
             }
 
             #header .actions.special {
@@ -78,14 +93,14 @@
                 font-size: 0.95rem;
             }
 
-            .workflow-list {
-                text-align: left;
-                max-width: 52rem;
+            .section-copy {
+                max-width: 48rem;
                 margin: 0 auto;
+                text-align: center;
             }
 
-            .workflow-list li {
-                margin: 0 0 0.7rem 0;
+            .image-grid {
+                margin-top: 2rem;
             }
         </style>
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -94,13 +109,14 @@
 
         <section id="header">
             <div class="inner">
-                <h1><strong>pySSP</strong></h1>
-                <p class="hero-subtitle">An open source, free alternative to older SSP soundboard software, with more functionality for modern show playback workflows.</p>
+                <h1><strong>Python SSP</strong></h1>
+                <p class="hero-subtitle">An open source alternative to Sports Sounds Pro for show playback and arena production.</p>
                 <ul class="actions special">
                     <li><a href="https://github.com/sikaxn/pySSP/releases/" class="button primary">Download</a></li>
+                    <li><a href="/docs/" class="button">Documentation</a></li>
                 </ul>
                 <div class="hero-image">
-                    <img src="images/main_ui.png" alt="pySSP main interface" />
+                    <img src="images/main_ui.png" alt="Python SSP main interface" />
                 </div>
             </div>
         </section>
@@ -108,60 +124,44 @@
         <section id="overview" class="main style1">
             <div class="container">
                 <header class="major">
-                    <h2>Software focused on real show workflows</h2>
+                    <h2>Built to replace the old workflow</h2>
                 </header>
-                <p>pySSP helps teams reduce repetitive prep tasks, validate show data, and keep playback workflows predictable under production pressure. It is intended for practical use in rehearsal and performance pipelines where reliability matters more than novelty.</p>
+                <p class="section-copy">Python SSP keeps the familiar Sports Sounds Pro workflow while adding modern control options and an open codebase. It is aimed at operators who want the core SSP feature set without being locked to the old software.</p>
             </div>
         </section>
 
-        <section id="capabilities" class="main style2 special">
+        <section id="features" class="main style2 special">
             <div class="container">
                 <header class="major">
-                    <h2>Core Capabilities</h2>
+                    <h2>Features</h2>
                 </header>
                 <div class="row gtr-150">
-                    <div class="col-4 col-12-medium">
+                    <div class="col-3 col-6-medium col-12-small">
                         <div class="feature-card">
-                            <span class="icon solid style1 major fa-cogs"></span>
-                            <h3>Automation Scripts</h3>
-                            <p>Build repeatable scripts for setup, validation, and maintenance across show projects.</p>
+                            <span class="icon solid style1 major fa-list"></span>
+                            <h3>Classic SSP Features</h3>
+                            <p>Most of the features operators expect from older SSP systems are already available in Python SSP.</p>
                         </div>
                     </div>
-                    <div class="col-4 col-12-medium">
+                    <div class="col-3 col-6-medium col-12-small">
                         <div class="feature-card">
-                            <span class="icon solid style2 major fa-list"></span>
-                            <h3>Cue Management</h3>
-                            <p>Support cue edits and cue-point updates with less manual work and fewer hand-entry errors.</p>
+                            <span class="icon solid style2 major fa-clock"></span>
+                            <h3>Timecode Output</h3>
+                            <p>Drive external systems with timecode output for tighter playback sync during shows.</p>
                         </div>
                     </div>
-                    <div class="col-4 col-12-medium">
+                    <div class="col-3 col-6-medium col-12-small">
                         <div class="feature-card">
-                            <span class="icon solid style3 major fa-search"></span>
-                            <h3>Large Project Navigation</h3>
-                            <p>Speed up lookups and bulk operations for bigger libraries and complex productions.</p>
+                            <span class="icon solid style3 major fa-globe"></span>
+                            <h3>Web Remote</h3>
+                            <p>Control playback remotely from a browser when you need fast access away from the main machine.</p>
                         </div>
                     </div>
-                </div>
-                <div class="row gtr-150">
-                    <div class="col-4 col-12-medium">
+                    <div class="col-3 col-6-medium col-12-small">
                         <div class="feature-card">
-                            <span class="icon solid style4 major fa-clock"></span>
-                            <h3>Timecode Workflow Support</h3>
-                            <p>Strengthen consistency for timecode-driven playback preparation and verification.</p>
-                        </div>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <div class="feature-card">
-                            <span class="icon solid style5 major fa-layer-group"></span>
-                            <h3>Page and Group Actions</h3>
-                            <p>Handle page-level and group-level updates in bulk when projects scale up.</p>
-                        </div>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <div class="feature-card">
-                            <span class="icon solid style6 major fa-book"></span>
-                            <h3>Living Documentation</h3>
-                            <p>Published docs are continuously built to keep setup steps and API references current.</p>
+                            <span class="icon solid style4 major fa-sliders-h"></span>
+                            <h3>MIDI Control</h3>
+                            <p>Map playback actions to MIDI hardware for hands-on operation in live production setups.</p>
                         </div>
                     </div>
                 </div>
@@ -171,34 +171,40 @@
         <section id="screens" class="main style1 special">
             <div class="container">
                 <header class="major">
-                    <h2>Interface Coverage</h2>
+                    <h2>Interface</h2>
                 </header>
-                <div class="row gtr-150">
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/dsp_window.png" alt="DSP window" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/timecode_panel.png" alt="Timecode panel" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/search_window.png" alt="Search window" /></span></div>
+                <p class="section-copy">Python SSP includes dedicated tools for playback, timecode routing, web remote access, MIDI mapping, sound button editing, search, and settings. Below are more of the screens already available in the project.</p>
+                <div class="row gtr-150 image-grid">
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/timecode_panel.png" alt="Python SSP timecode output panel" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/settings/web_remote.png" alt="Python SSP web remote settings" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/settings/midi_system_hotkey.png" alt="Python SSP MIDI control settings" /></span></div>
                 </div>
-                <div class="row gtr-150">
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/file_menu.png" alt="File menu" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/tools_menu.png" alt="Tools menu" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/stage_display.png" alt="Stage display" /></span></div>
+                <div class="row gtr-150 image-grid">
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/dsp_window.png" alt="Python SSP DSP window" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/search_window.png" alt="Python SSP search window" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/stage_display.png" alt="Python SSP stage display" /></span></div>
+                </div>
+                <div class="row gtr-150 image-grid">
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/file_menu.png" alt="Python SSP file menu" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/tools_menu.png" alt="Python SSP tools menu" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/edit_sound_button.png" alt="Python SSP sound button editor" /></span></div>
+                </div>
+                <div class="row gtr-150 image-grid">
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/group_pages_soundbutton.png" alt="Python SSP group pages and sound button view" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/page_right_menu.png" alt="Python SSP page right menu" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/sound_button_right_menu.png" alt="Python SSP sound button right menu" /></span></div>
                 </div>
             </div>
         </section>
 
-        <section id="workflow" class="main style2 special">
+        <section id="price" class="main style2 special">
             <div class="container">
                 <header class="major">
-                    <h2>Typical Workflow</h2>
+                    <h2>Price</h2>
                 </header>
-                <ol class="workflow-list">
-                    <li>Prepare or load a show project and inspect current cue/page structure.</li>
-                    <li>Run pySSP scripts to apply repetitive updates and data checks.</li>
-                    <li>Validate playback behavior in UI areas such as timecode, DSP, and routing.</li>
-                    <li>Publish or share outputs with confidence before rehearsal or live use.</li>
-                </ol>
+                <p class="section-copy">Always free. Python SSP is open source, so anyone can use it, inspect it, and help improve it. If you want to add features, fix issues, or improve documentation, contributions are welcome.</p>
                 <ul class="actions special">
-                    <li><a href="/docs/" class="button">Open Documentation</a></li>
+                    <li><a href="https://github.com/sikaxn/pySSP" class="button">Contribute</a></li>
                 </ul>
             </div>
         </section>
@@ -209,7 +215,7 @@
                 <li><a href="/docs/" class="icon solid alt fa-book"><span class="label">Documentation</span></a></li>
             </ul>
             <ul class="copyright">
-                <li>&copy; pySSP</li><li>Design Base: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>&copy; Python SSP</li><li>Design Base: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </section>
 
