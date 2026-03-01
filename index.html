@@ -1,12 +1,224 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>pySSP Documentation</title>
-  <meta http-equiv="refresh" content="0; url=/docs/">
-</head>
-<body>
-  <p>Redirecting to <a href="/docs/">pySSP docs</a>...</p>
-</body>
+<!DOCTYPE HTML>
+<!--
+    Photon by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>pySSP</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="pySSP: Python tooling for Sound Show Playback workflows." />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            :root {
+                --panel: rgba(255, 255, 255, 0.08);
+                --panel-border: rgba(255, 255, 255, 0.18);
+            }
+
+            #header .inner {
+                max-width: 62rem;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #header h1,
+            #header p {
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                max-width: 46rem;
+                margin: 0.75rem auto 0 auto;
+                text-align: center;
+            }
+
+            #header .actions.special {
+                justify-content: center;
+                margin-top: 1.1rem;
+            }
+
+            #header .actions:after {
+                display: none;
+                content: none;
+            }
+
+            .hero-image {
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-image img {
+                width: 100%;
+                max-width: 50rem;
+                margin: 1.6rem auto 0 auto;
+                border: 1px solid var(--panel-border);
+                border-radius: 0.45rem;
+                box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.3);
+                display: block;
+            }
+
+            .feature-card {
+                background: var(--panel);
+                border: 1px solid var(--panel-border);
+                border-radius: 0.55rem;
+                padding: 1.2rem;
+                height: 100%;
+            }
+
+            .feature-card h3 {
+                margin: 0.5rem 0 0.7rem 0;
+                font-size: 1.05rem;
+            }
+
+            .feature-card p {
+                margin: 0;
+                font-size: 0.95rem;
+            }
+
+            .workflow-list {
+                text-align: left;
+                max-width: 52rem;
+                margin: 0 auto;
+            }
+
+            .workflow-list li {
+                margin: 0 0 0.7rem 0;
+            }
+        </style>
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <section id="header">
+            <div class="inner">
+                <h1><strong>pySSP</strong></h1>
+                <p class="hero-subtitle">An open source, free alternative to older SSP soundboard software, with more functionality for modern show playback workflows.</p>
+                <ul class="actions special">
+                    <li><a href="https://github.com/sikaxn/pySSP/releases/" class="button primary">Download</a></li>
+                </ul>
+                <div class="hero-image">
+                    <img src="images/main_ui.png" alt="pySSP main interface" />
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="main style1">
+            <div class="container">
+                <header class="major">
+                    <h2>Software focused on real show workflows</h2>
+                </header>
+                <p>pySSP helps teams reduce repetitive prep tasks, validate show data, and keep playback workflows predictable under production pressure. It is intended for practical use in rehearsal and performance pipelines where reliability matters more than novelty.</p>
+            </div>
+        </section>
+
+        <section id="capabilities" class="main style2 special">
+            <div class="container">
+                <header class="major">
+                    <h2>Core Capabilities</h2>
+                </header>
+                <div class="row gtr-150">
+                    <div class="col-4 col-12-medium">
+                        <div class="feature-card">
+                            <span class="icon solid style1 major fa-cogs"></span>
+                            <h3>Automation Scripts</h3>
+                            <p>Build repeatable scripts for setup, validation, and maintenance across show projects.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <div class="feature-card">
+                            <span class="icon solid style2 major fa-list"></span>
+                            <h3>Cue Management</h3>
+                            <p>Support cue edits and cue-point updates with less manual work and fewer hand-entry errors.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <div class="feature-card">
+                            <span class="icon solid style3 major fa-search"></span>
+                            <h3>Large Project Navigation</h3>
+                            <p>Speed up lookups and bulk operations for bigger libraries and complex productions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gtr-150">
+                    <div class="col-4 col-12-medium">
+                        <div class="feature-card">
+                            <span class="icon solid style4 major fa-clock"></span>
+                            <h3>Timecode Workflow Support</h3>
+                            <p>Strengthen consistency for timecode-driven playback preparation and verification.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <div class="feature-card">
+                            <span class="icon solid style5 major fa-layer-group"></span>
+                            <h3>Page and Group Actions</h3>
+                            <p>Handle page-level and group-level updates in bulk when projects scale up.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <div class="feature-card">
+                            <span class="icon solid style6 major fa-book"></span>
+                            <h3>Living Documentation</h3>
+                            <p>Published docs are continuously built to keep setup steps and API references current.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screens" class="main style1 special">
+            <div class="container">
+                <header class="major">
+                    <h2>Interface Coverage</h2>
+                </header>
+                <div class="row gtr-150">
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/dsp_window.png" alt="DSP window" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/timecode_panel.png" alt="Timecode panel" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/search_window.png" alt="Search window" /></span></div>
+                </div>
+                <div class="row gtr-150">
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/file_menu.png" alt="File menu" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/tools_menu.png" alt="Tools menu" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/stage_display.png" alt="Stage display" /></span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow" class="main style2 special">
+            <div class="container">
+                <header class="major">
+                    <h2>Typical Workflow</h2>
+                </header>
+                <ol class="workflow-list">
+                    <li>Prepare or load a show project and inspect current cue/page structure.</li>
+                    <li>Run pySSP scripts to apply repetitive updates and data checks.</li>
+                    <li>Validate playback behavior in UI areas such as timecode, DSP, and routing.</li>
+                    <li>Publish or share outputs with confidence before rehearsal or live use.</li>
+                </ol>
+                <ul class="actions special">
+                    <li><a href="/docs/" class="button">Open Documentation</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="footer">
+            <ul class="icons">
+                <li><a href="https://github.com/sikaxn/pySSP" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="/docs/" class="icon solid alt fa-book"><span class="label">Documentation</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; pySSP</li><li>Design Base: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </section>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
