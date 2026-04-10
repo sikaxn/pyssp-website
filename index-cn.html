@@ -6,15 +6,48 @@
 -->
 <html lang="zh-Hans">
     <head>
-        <title>Python SSP</title>
+        <title>Python SSP - 免费开源的 Sports Sounds Pro 替代方案</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="Python SSP：一个面向演出回放流程的开源 Sports Sounds Pro 替代方案。" />
         <meta name="keywords" content="Python SSP, Sports Sounds Pro 替代, 演出回放, 场馆音频, 时间码输出, Web 遥控, MIDI 控制, 音频回放软件" />
-        <link rel="alternate" hreflang="en" href="index.html" />
-        <link rel="alternate" hreflang="zh-Hans" href="index-cn.html" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href="https://pyssp.studenttechsupport.com/index-cn.html" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Python SSP" />
+        <meta property="og:title" content="Python SSP - 免费开源的 Sports Sounds Pro 替代方案" />
+        <meta property="og:description" content="Python SSP 是面向演出回放的开源软件，支持时间码输出、Web 遥控和 MIDI 控制。" />
+        <meta property="og:url" content="https://pyssp.studenttechsupport.com/index-cn.html" />
+        <meta property="og:image" content="https://pyssp.studenttechsupport.com/images/main_ui.png" />
+        <meta property="og:locale" content="zh_CN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Python SSP - 免费开源演出回放软件" />
+        <meta name="twitter:description" content="开源 Sports Sounds Pro 替代方案，支持 Windows 与 macOS Apple 芯片。" />
+        <meta name="twitter:image" content="https://pyssp.studenttechsupport.com/images/main_ui.png" />
+        <link rel="alternate" hreflang="en" href="https://pyssp.studenttechsupport.com/" />
+        <link rel="alternate" hreflang="zh-Hans" href="https://pyssp.studenttechsupport.com/index-cn.html" />
+        <link rel="alternate" hreflang="x-default" href="https://pyssp.studenttechsupport.com/" />
+        <link rel="sitemap" type="application/xml" href="https://pyssp.studenttechsupport.com/sitemap.xml" />
         <link rel="icon" type="image/png" href="images/logo2.png" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Python SSP",
+                "applicationCategory": "MultimediaApplication",
+                "operatingSystem": "Windows, macOS",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "url": "https://pyssp.studenttechsupport.com/index-cn.html",
+                "downloadUrl": "https://github.com/sikaxn/pySSP/releases/",
+                "inLanguage": "zh-Hans",
+                "description": "一个面向演出回放与场馆制作的开源 Sports Sounds Pro 替代方案。"
+            }
+        </script>
         <style>
             :root {
                 --panel: rgba(255, 255, 255, 0.08);
@@ -180,11 +213,12 @@
                     <li><a href="/docs/" class="button">文档</a></li>
                 </ul>
                 <div class="hero-image">
-                    <img src="images/main_ui.png" alt="Python SSP 主界面" />
+                    <img src="images/main_ui.png" alt="Python SSP 主界面" fetchpriority="high" decoding="async" />
                 </div>
             </div>
         </section>
 
+        <main id="main-content">
         <section id="overview" class="main style1">
             <div class="container">
                 <header class="major overview-title">
@@ -240,24 +274,24 @@
                 </header>
                 <p class="section-copy">Python SSP 已包含回放、时间码路由、Web 遥控访问、MIDI 映射、音频按钮编辑、搜索和设置等专用工具。下面展示的是项目中目前已经可用的部分界面。</p>
                 <div class="row gtr-150 image-grid">
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/timecode_panel.png" alt="Python SSP 时间码输出面板" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/settings/web_remote.png" alt="Python SSP Web 遥控设置" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/settings/midi_system_hotkey.png" alt="Python SSP MIDI 控制设置" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/timecode_panel.png" alt="Python SSP 时间码输出面板" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/settings/web_remote.png" alt="Python SSP Web 遥控设置" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/settings/midi_system_hotkey.png" alt="Python SSP MIDI 控制设置" loading="lazy" decoding="async" /></span></div>
                 </div>
                 <div class="row gtr-150 image-grid">
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/dsp_window.png" alt="Python SSP DSP 窗口" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/search_window.png" alt="Python SSP 搜索窗口" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/stage_display.png" alt="Python SSP 舞台显示界面" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/dsp_window.png" alt="Python SSP DSP 窗口" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/search_window.png" alt="Python SSP 搜索窗口" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/stage_display.png" alt="Python SSP 舞台显示界面" loading="lazy" decoding="async" /></span></div>
                 </div>
                 <div class="row gtr-150 image-grid">
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/file_menu.png" alt="Python SSP 文件菜单" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/tools_menu.png" alt="Python SSP 工具菜单" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/edit_sound_button.png" alt="Python SSP 音频按钮编辑器" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/file_menu.png" alt="Python SSP 文件菜单" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/tools_menu.png" alt="Python SSP 工具菜单" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/edit_sound_button.png" alt="Python SSP 音频按钮编辑器" loading="lazy" decoding="async" /></span></div>
                 </div>
                 <div class="row gtr-150 image-grid">
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/group_pages_soundbutton.png" alt="Python SSP 分组页面与音频按钮视图" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/page_right_menu.png" alt="Python SSP 页面右键菜单" /></span></div>
-                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/sound_button_right_menu.png" alt="Python SSP 音频按钮右键菜单" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/group_pages_soundbutton.png" alt="Python SSP 分组页面与音频按钮视图" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/page_right_menu.png" alt="Python SSP 页面右键菜单" loading="lazy" decoding="async" /></span></div>
+                    <div class="col-4 col-12-medium"><span class="image fit"><img src="images/sound_button_right_menu.png" alt="Python SSP 音频按钮右键菜单" loading="lazy" decoding="async" /></span></div>
                 </div>
             </div>
         </section>
@@ -273,6 +307,7 @@
                 </ul>
             </div>
         </section>
+        </main>
 
         <section id="footer">
             <ul class="icons">
@@ -293,3 +328,4 @@
 
     </body>
 </html>
+
